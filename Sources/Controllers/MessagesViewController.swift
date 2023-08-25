@@ -74,7 +74,7 @@ open class MessagesViewController: UIViewController, UICollectionViewDelegateFlo
     setupInputBar(for: inputBarType)
     setupDelegates()
     addObservers()
-    addKeyboardObservers()
+    // addKeyboardObservers()
     addMenuControllerObservers()
     /// Layout input container view and update messagesCollectionViewInsets
     view.layoutIfNeeded()
