@@ -30,7 +30,7 @@ extension MessagesViewController {
 
   // MARK: - Register Observers
 
-  open func addKeyboardObservers() {
+  internal func addKeyboardObservers() {
     keyboardManager.bind(inputAccessoryView: inputContainerView)
     keyboardManager.bind(to: messagesCollectionView)
 
