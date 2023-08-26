@@ -42,7 +42,7 @@ extension MessagesViewController {
       .delay(for: .milliseconds(200), scheduler: DispatchQueue.main)
       .receive(on: DispatchQueue.main)
       .sink { [weak self] notification in
-        self?.handleTextViewDidBeginEditing(notification)
+        // self?.handleTextViewDidBeginEditing(notification)
       }
       .store(in: &disposeBag)
 
