@@ -42,7 +42,7 @@ extension MessagesViewController {
       .delay(for: .milliseconds(200), scheduler: DispatchQueue.main)
       .receive(on: DispatchQueue.main)
       .sink { [weak self] notification in
-        // self?.handleTextViewDidBeginEditing(notification)
+        self?.handleTextViewDidBeginEditing(notification)
       }
       .store(in: &disposeBag)
 
@@ -86,11 +86,11 @@ extension MessagesViewController {
     let normalizedNewBottomInset = max(0, newBottomInset)
     let differenceOfBottomInset = newBottomInset - messageCollectionViewBottomInset
 
-    UIView.performWithoutAnimation {
-      guard differenceOfBottomInset != 0 else { return }
-      messagesCollectionView.contentInset.bottom = normalizedNewBottomInset
-      messagesCollectionView.verticalScrollIndicatorInsets.bottom = newBottomInset
-    }
+    //UIView.performWithoutAnimation {
+    //  guard differenceOfBottomInset != 0 else { return }
+    //  messagesCollectionView.contentInset.bottom = normalizedNewBottomInset
+    //  messagesCollectionView.verticalScrollIndicatorInsets.bottom = newBottomInset
+    //}
   }
 
   // MARK: Private
